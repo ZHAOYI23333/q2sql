@@ -88,11 +88,11 @@ if __name__ == '__main__':
   parser.add_argument('--pred_file', type=str, default='')
   args = parser.parse_args()
 
-  db_path = 'data/database/'
+  db_path = '../../Data/sparc/database/'
   if args.dataset == 'sparc':
-    table_schema_path = 'data/sparc/tables.json'
+    table_schema_path = '../../Data/sparc/tables.json'
     if args.split == 'dev':
-      gold_path = 'data/sparc/dev_gold.txt'
+      gold_path = '../../Data/sparc/dev_gold.txt'
   elif args.dataset == 'cosql':
     table_schema_path = 'data/cosql/tables.json'
     if args.split == 'dev':

@@ -182,15 +182,15 @@ def preprocess(dataset):
   print()
 
   if dataset == 'sparc':
-    sparc_dir = 'data/sparc/'
-    database_schema_filename = 'data/sparc/tables.json'
-    output_dir = 'data/sparc_data'
+    sparc_dir = '../../Data/sparc/'
+    database_schema_filename = '../../Data/sparc/tables.json'
+    output_dir = '../../Data/sparc_data'
     train_database, dev_database = read_db_split(sparc_dir)
     interaction_list = read_sparc(sparc_dir)
   elif dataset == 'cosql':
-    cosql_dir = 'data/cosql/'
-    database_schema_filename = 'data/cosql/tables.json'
-    output_dir = 'data/cosql_data'
+    cosql_dir = '../../Data/cosql/'
+    database_schema_filename = '../../Data/cosql/tables.json'
+    output_dir = '../../Data/cosql_data'
     train_database, dev_database = read_db_split(cosql_dir)
     interaction_list = read_cosql(cosql_dir)
 

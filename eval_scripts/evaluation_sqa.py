@@ -20,6 +20,7 @@
 ################################
 
 import os, sys
+#print(sys.version)
 import json
 import sqlite3
 import traceback
@@ -545,6 +546,7 @@ def evaluate(gold, predict, db_dir, etype, kmaps):
             g_str, db = g
             db_name = db
             db = os.path.join(db_dir, db, db + ".sqlite")
+	    
             schema = Schema(get_schema(db))
             g_sql = get_sql(schema, g_str)
             hardness = evaluator.eval_hardness(g_sql)

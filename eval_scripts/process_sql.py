@@ -26,6 +26,8 @@
 
 import json
 import sqlite3
+#import sys
+#print(sys.version)
 from nltk import word_tokenize
 
 CLAUSE_KEYWORDS = ('select', 'from', 'where', 'group', 'order', 'limit', 'intersect', 'union', 'except')

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "eval_scripts/evaluation_sqa.py", line 28, in <module>
+    from process_sql import tokenize, get_schema, get_tables_with_alias, Schema, get_sql
+  File "/home/felix/CloudStation/sparc_atis_pytorch/eval_scripts/process_sql.py", line 29, in <module>
+    from nltk import word_tokenize
+ImportError: No module named nltk

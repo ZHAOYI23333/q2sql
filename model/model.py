@@ -211,7 +211,7 @@ class ATISModel(torch.nn.Module):
         if params.discourse_level_lstm:
             self.discourse_lstms = torch_utils.create_multilayer_lstm_params(1, params.encoder_state_size, params.encoder_state_size / 2, "LSTM-t")
             self.initial_discourse_state = torch_utils.add_params(tuple([params.encoder_state_size / 2]), "V-turn-state-0")
-
+        ## TODO: what is snippet here
         # Snippet encoder
         final_snippet_size = 0
         if params.use_snippets and not params.previous_decoder_snippet_encoding:
