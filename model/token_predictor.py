@@ -111,9 +111,11 @@ class TokenPredictor(torch.nn.Module):
         return scores, self.vocabulary.inorder_tokens
 
     def forward(self, prediction_input, dropout_amount=0.):
+	# given decoder state predict a token
         decoder_state = prediction_input.decoder_state
         input_hidden_states = prediction_input.input_hidden_states
-
+	
+	# self attention
         attention_results = self.attention_module(decoder_state, input_hidden_states)
 
         state_and_attn = torch.cat([decoder_state, attention_results.vector], dim=0)
