@@ -192,7 +192,7 @@ class ATISModel(torch.nn.Module):
         if params.discourse_level_lstm:
             encoder_input_size += params.encoder_state_size / 2
 
-        self.utterance_encoder = Encoder(params.encoder_num_layers, encoder_input_size, encoder_output_size)
+        self.utterance_encoder = Encoder(params.encoder_num_layers, encoder_input_size, encoder_output_size, from_pretrained=params.from_pretrained)
 
         # Positional embedder for utterances
         attention_key_size = params.encoder_state_size

@@ -61,11 +61,13 @@ def interpret_args():
     parser.add_argument('--results_file', type=str, default='results.txt')
 
     ### Model architecture
-    parser.add_argument('--input_embedding_size', type=int, default=300)
+    parser.add_argument('--input_embedding_size', type=int, default=768)
     parser.add_argument('--output_embedding_size', type=int, default=300)
 
-    parser.add_argument('--encoder_state_size', type=int, default=300)
+    parser.add_argument('--encoder_state_size', type=int, default=768)
     parser.add_argument('--decoder_state_size', type=int, default=300)
+
+    parser.add_argument('--from_pretrained', type=bool, default=True)
 
     parser.add_argument('--encoder_num_layers', type=int, default=1)
     parser.add_argument('--decoder_num_layers', type=int, default=2)
